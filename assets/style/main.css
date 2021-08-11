@@ -1,0 +1,194 @@
+.test {
+    background-color: #ffd777;
+}
+
+.test2 {
+    background-color: #797979;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navBtn {
+    width: fit-content;
+}
+
+.btn,
+.nav-item button {
+    border: 0;
+}
+
+.nav-item button:hover {
+    background-color: #797979;
+}
+
+body {
+    font-family: 'Ruda', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.listToDo {
+    max-width: 80%;
+    min-width: 20%;
+    margin-left: 18%;
+    margin-top: 2.5%;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+h4 {
+    color: #6b6b6b;
+    font-size: large;
+    font-weight: bold;
+}
+
+.btnAddTask {
+    background-color: #5CB8C5;
+    color: white;
+    border: 2px #797979;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    max-width: fit-content;
+    height: 30px;
+    font-size: 15px;
+    padding: 7px, 10px !important;
+}
+
+.insertTask,
+.updateTasks {
+    max-width: 80%;
+    min-width: 20%;
+    align-items: center;
+    background-color: white;
+    padding: 2%;
+    box-shadow: 0 4px 2px -2px gray;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    font-size: 12px;
+    display: none;
+}
+
+#newSaveBtn,
+#updateSaveBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    margin-left: 20px;
+    padding: 2px;
+    margin-right: 3px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#updateCancelBtn,
+#newCancelBtn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tabel {
+    width: 100%;
+    overflow-x: auto;
+    align-items: center;
+}
+
+th {
+    cursor: pointer;
+    font-weight: bold;
+    color: #797979;
+}
+
+.PopUpForms {
+    background: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    background-color: #f2f2f2;
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 35%;
+    height: 45%;
+}
+
+.btnCancel,
+.btnCancel1 {
+    background-color: rgb(233, 50, 50);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    /* width: 100%; */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    /* opacity: 0.8; */
+}
+
+.btnOK {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.icons {
+    width: 100px;
+}
+
+.icons #done {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 18%;
+}
+
+.icons #delete {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.icons #edit {
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+tbody tr {
+    cursor: move;
+}

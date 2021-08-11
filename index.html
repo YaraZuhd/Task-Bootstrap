@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <!-- <script src="./jQuery/jquery-3.6.0.js" defer></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" defer></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <script src="./assets/script/app.js" defer></script>
+    <!--Font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Title Of The Page -->
+    <title>TODO</title>
+    <link rel="icon" href="https://icon-library.com/images/todo-list-icon/todo-list-icon-26.jpg">
+
+</head>
+
+<body>
+    <div class="page-header p-2 test">
+        <nav class="navbar navbar-expand-lg navbar-light test">
+            <h1 class="text-white"> <img class="logo" src="./img/to-do-list.png" width=" 60" height="60" class="d-inline-block align-top" alt="Logo of todolist">TODO List</h1>
+            <button class="navbar-toggler text-white btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex flex-row ml-auto flex-nowrap">
+                    <li class="nav-item ml-2" style="background-color: #111;">
+                        <button class="navBtn btn-block" style="background-color: #111;"><a class="nav-link text-white mr-3 ml-2" href="index.html">Home <span class="sr-only">(current)</span></a></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="navBtn test btn-block"><a class="nav-link text-white mr-3 ml-2" href="htmls/about.html">About Us</a></button>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <button class="navBtn test btn-block"><a class="nav-link text-white mr-3 ml-2" href="htmls/contact.html">Contact Us</a></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container w-100 p-2">
+        <p class="mt-5 ml-5">
+            Welcome To Our Website, We're Happy That You Chose Us To Help You Arranging Your Work With Our List, Have Fun
+        </p>
+        <div class="listToDo mt-5 ml-5 p-4" id="listToDoId">
+            <div>
+                <h4><i class="fa fa-tasks" aria-hidden="true"></i> Todo List</h4>
+            </div>
+            <div class="tabelList">
+                <div class="tabel" id="tabelId">
+
+                </div>
+            </div>
+            <button id="btnAdd" class="addTask btn mt-2 btnAddTask">Add New Task</button>
+        </div>
+        <form class="insertTask mt-5 ml-5" id="insertTaskId">
+            <div class="form-group row">
+                <label for="insertTaskk" class="labelInsert col-sm-2 col-form-label">Insert A New Task :</label>
+                <div class="col-sm-10">
+                    <textarea name="newTask" id="insertTaskk" cols="110" rows="5" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="priority" class="col-sm-2 col-form-label">Choose A Priority:</label>
+                <div class="col-sm-10">
+                    <select name="priority" id="priority" class="form-control">
+                    <option value="none" selected disabled hidden>Select an Option</option>                    
+                    <option value="first">1</option>
+                    <option value="second">2</option>
+                    <option value="third">3</option>
+                    <option value="forth">4</option>
+                    <option value="fivth">5</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="tag" class="col-sm-2 col-form-label">Insert A Tag For The Task: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="tag" id="tag" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+
+                <div class="col-sm-12 d-flex justify-content-end">
+                    <button id="newSaveBtn"><i class="fa fa-check form-control" aria-hidden="true"></i></button>
+                    <button id="newCancelBtn"><i class="fa fa-times form-control" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </form>
+
+        <form class="updateTasks mt-5 ml-5" id="updateTaskId">
+            <div class="form-group row">
+                <label for="updateTask" class="labelUpdate col-sm-2 col-form-label">Update Your Task :</label>
+                <div class="col-sm-10">
+                    <textarea name="updateTask" id="updateTask" cols="110" rows="5" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="priorityUpdate" class="col-sm-2 col-form-label">Update Your Priority:</label>
+                <div class="col-sm-10">
+                    <select name="priorityUpdate" id="priorityUpdate" class="form-control">
+                    <option value="none" selected disabled hidden>Select an Option</option>                    
+                    <option value="first">1</option>
+                    <option value="second">2</option>
+                    <option value="third">3</option>
+                    <option value="forth">4</option>
+                    <option value="fivth">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="tagUpdate" class="col-sm-2 col-form-label">Update Your Tag For The Task: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="tagUpdate" id="tagUpdate" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+
+                <div class="col-sm-12 d-flex justify-content-end">
+                    <button id="updateSaveBtn"><i class="fa fa-check form-control" aria-hidden="true"></i></button>
+                    <button id="updateCancelBtn"><i class="fa fa-times form-control" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="PopUpForms" id="myModal">
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h1>Warning</h1>
+                <label><b>Don't Leave It Empty!</b></label>
+                <div>
+                    <button type="button" class="btnCancel" onclick="cancelEdit()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="PopUpForms" id="myModal1">
+        <div class="form-popup" id="myForm1">
+            <form class="form-container">
+                <h1>Confirm</h1>
+                <label><b>Are You Sure You Want To Delete This Element!</b></label>
+                <div class="buttonForms">
+                    <button type="button" class="btnOK" id="okkk">OK</button>
+                    <button type="button" class="btnCancel1" onclick="show1()">Close</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
