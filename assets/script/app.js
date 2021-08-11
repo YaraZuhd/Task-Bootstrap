@@ -18,7 +18,9 @@ if (localStorage.getItem("ToDo") == null) {
     displayTable()
 }
 
-
+document.getElementById('cancell').addEventListener('click', function() {
+    deleteForm.style.display = "none";
+});
 addTaskBtn.addEventListener('click', function() {
     ToDoList.style.display = "none";
     inserTask.style.display = "block";
@@ -107,31 +109,6 @@ function displayTable() {
     });
 }
 
-function sortDate(index) {
-    if (index === 3) {
-        ListToDo.sort(function(a, b) {
-            var keyA = new Date(a.createdAt),
-                keyB = new Date(b.createdAt);
-            // Compare the 2 dates
-            if (keyA < keyB) return -1;
-            if (keyA > keyB) return 1;
-            return 0;
-        });
-    } else {
-        ListToDo.sort(function(a, b) {
-            var keyA = new Date(a.completedAt),
-                keyB = new Date(b.completedAt);
-            // Compare the 2 dates
-            if (keyA < keyB) return -1;
-            if (keyA > keyB) return 1;
-            return 0;
-        });
-
-    }
-    displayTable()
-}
-
-
 function addTask(event) {
     event.preventDefault();
     let input = document.getElementById('insertTaskk');
@@ -210,24 +187,6 @@ function setSelectedValue(selectObj, valueToSet) {
     }
 }
 
-function convertDate(d) {
-    var p = d.split("/");
-    return +(p[2] + p[1] + p[0]);
-}
-
-function sortByDate() {
-    var tbody = document.querySelector("tr:not(tr:first-child)");
-    // get trs as array for ease of use
-    var rows = [].slice.call(tbody.querySelectorAll("tr"));
-
-    rows.sort(function(a, b) {
-        return convertDate(a.cells[0].innerHTML) - convertDate(b.cells[0].innerHTML);
-    });
-
-    rows.forEach(function(v) {
-        tbody.appendChild(v); // note that .appendChild() *moves* elements
-    });
-}
 
 function cancelEdit() {
     warnningForm.style.display = "none";
